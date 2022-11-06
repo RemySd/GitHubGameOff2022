@@ -12,7 +12,7 @@ fi
 # GROUND #
 "$aseprite" -b IsometricTiles/tiles_map.aseprite --sheet IsometricTiles/tiles_map.png
 "$aseprite" -b IsometricTilesTest/tiles_test.aseprite --sheet IsometricTilesTest/tiles_test.png
-
+"$aseprite" -b IsometricTiles/colored_tiles_map.aseprite --sheet IsometricTiles/colored_tiles_map.png
 ### END ISOMETRIC TILES ###
 
 ### DECORATIONS ###
