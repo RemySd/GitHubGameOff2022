@@ -42,4 +42,3 @@ fi
 "$aseprite" -b Player/Redamon/run_SE_player.aseprite --sheet Player/Redamon/run_SE_player.png
 "$aseprite" -b Player/Redamon/run_S_player.aseprite --sheet Player/Redamon/run_S_player.png
 ### END PLAYER ###
-
