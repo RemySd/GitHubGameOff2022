@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlockComportement : MonoBehaviour
 {
@@ -18,6 +19,14 @@ public class BlockComportement : MonoBehaviour
         {
             isPressed = true;
             spriteRenderer.sprite = pressedBlock;
+
+            BlockAttribute blockAttribute = GetComponent<BlockAttribute>();
+
+            if (blockAttribute.isMortal)
+            {
+                Scene scene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(scene.name);
+            }
         }
     }
 }

@@ -12,6 +12,20 @@ public class BlockBuilder : MonoBehaviour
         blocks = GameObject.FindGameObjectsWithTag("Block");
 
         BuildBlocksAdjacents();
+        RuleCheck();
+    }
+
+    public void RuleCheck()
+    {
+        foreach (GameObject block in blocks)
+        {
+            BlockAttribute blockAttribute = block.GetComponent<BlockAttribute>();
+
+            if (blockAttribute.GetAdjacentByColor("green").Count < 2 && blockAttribute.GetColor() == "red")
+            {
+                blockAttribute.SetIsMortal(true);
+            }
+        }
     }
 
     public void BuildBlocksAdjacents()
