@@ -31,7 +31,7 @@ public class BlockComportement : MonoBehaviour
 
                 GameObject spikes = Instantiate(spikeEffects, Vector2.zero, Quaternion.identity);
                 spikes.transform.parent = transform;
-                spikes.transform.position = transform.position;
+                spikes.transform.position = transform.position + new Vector3(0f, 0.05f);
                 spikes.GetComponent<Animator>().Rebind();
 
                 ServiceLocator.GetInstance().GetCameraService().Shake();
