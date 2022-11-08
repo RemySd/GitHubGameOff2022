@@ -8,6 +8,8 @@ public class PlayerMovementV2 : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 1.0f;
 
+    public bool dead;
+
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -15,6 +17,11 @@ public class PlayerMovementV2 : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (dead)
+        {
+            return;
+        }
+
         Vector2 currentPos = rigidbody.position;
 
         float moveH = Input.GetAxis("Horizontal");

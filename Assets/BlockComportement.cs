@@ -24,8 +24,11 @@ public class BlockComportement : MonoBehaviour
 
             if (blockAttribute.isMortal)
             {
-                Scene scene = SceneManager.GetActiveScene();
-                SceneManager.LoadScene(scene.name);
+                PlayerAnimation playerAnimation = collision.gameObject.GetComponentInChildren<PlayerAnimation>();
+                playerAnimation.RunDeath();
+
+                // Scene scene = SceneManager.GetActiveScene();
+                // SceneManager.LoadScene(scene.name);
             }
         }
     }

@@ -430,6 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.6
+  dead: 0
 --- !u!70 &177854532
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3944,6 +3945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 345820ff3c1f7451597e4b45b7a9115a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMovement: {fileID: 177854531}
   staticDirections:
   - IdleN
   - IdleNW

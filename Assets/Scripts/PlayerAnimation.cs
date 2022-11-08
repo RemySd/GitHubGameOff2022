@@ -2,12 +2,16 @@ using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
+    [SerializeField] private PlayerMovementV2 playerMovement;
+
     private Animator anim;
 
     public string[] staticDirections = { "IdleN", "IdleNW", "IdleW", "IdleSW", "IdleS", "IdleSE", "IdleE", "IdleNE" };
     public string[] runDirections = { "RunN", "RunNW", "RunW", "RunSW", "RunS", "RunSE", "RunE", "RunNE" };
 
     int lastDirection;
+
+    private float angleSave;
 
     private void Awake()
     {
@@ -27,6 +31,11 @@ public class PlayerAnimation : MonoBehaviour
     //MARKER We used direction to determine their animation
     public void SetDirection(Vector2 _direction)
     {
+        if (playerMovement.dead)
+        {
+            return;
+        }
+
         string[] directionArray = null;
 
         if (_direction.magnitude < 0.01)//MARKER Character is static. And his velocity is close to zero
@@ -61,7 +70,23 @@ public class PlayerAnimation : MonoBehaviour
             angle += 360;
         }
 
+        angleSave = angle;
+
         float stepCount = angle / step;
         return Mathf.FloorToInt(stepCount);
+    }
+
+    public void RunDeath()
+    {
+        playerMovement.dead = true;
+
+        if (angleSave < 180)
+        {
+            anim.SetTrigger("DeathW");
+        }
+        else
+        {
+            anim.SetTrigger("DeathE");
+        }
     }
 }
