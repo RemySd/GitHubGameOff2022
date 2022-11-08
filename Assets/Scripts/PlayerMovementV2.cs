@@ -27,6 +27,11 @@ public class PlayerMovementV2 : MonoBehaviour
         float moveH = Input.GetAxis("Horizontal");
         float moveV = Input.GetAxis("Vertical");
 
+        if (moveH != 0 && moveV != 0)
+        {
+            moveV = moveV / 2;
+        }
+
         Vector2 inputVector = new Vector2(moveH, moveV);
 
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
