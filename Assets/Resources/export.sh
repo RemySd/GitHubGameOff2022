@@ -16,6 +16,10 @@ fi
 "$aseprite" -b IsometricTiles/red_tiles_death.aseprite --sheet IsometricTiles/red_tiles_death.png
 ### END ISOMETRIC TILES ###
 
+### EFFECTS ###
+"$aseprite" -b Effects/spikes_block.aseprite --sheet Effects/spikes_block.png
+### END EFFECTS ###
+
 ### DECORATIONS ###
 "$aseprite" -b Decorations/column_basement.aseprite --sheet Decorations/column_basement.png
 "$aseprite" -b Decorations/torch.aseprite --sheet Decorations/torch.png

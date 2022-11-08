@@ -7,6 +7,7 @@ public class BlockComportement : MonoBehaviour
     private bool isPressed = false;
 
     [SerializeField] private Sprite pressedBlock;
+    [SerializeField] private GameObject spikeEffects;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class BlockComportement : MonoBehaviour
         if (collision.CompareTag("Player") && !isPressed)
         {
             isPressed = true;
+
             spriteRenderer.sprite = pressedBlock;
 
             BlockAttribute blockAttribute = GetComponent<BlockAttribute>();
@@ -26,6 +28,13 @@ public class BlockComportement : MonoBehaviour
             {
                 PlayerAnimation playerAnimation = collision.gameObject.GetComponentInChildren<PlayerAnimation>();
                 playerAnimation.RunDeath();
+
+                GameObject spikes = Instantiate(spikeEffects, Vector2.zero, Quaternion.identity);
+                spikes.transform.parent = transform;
+                spikes.transform.position = transform.position;
+                spikes.GetComponent<Animator>().Rebind();
+
+                ServiceLocator.GetInstance().GetCameraService().Shake();
 
                 // Scene scene = SceneManager.GetActiveScene();
                 // SceneManager.LoadScene(scene.name);
