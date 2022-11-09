@@ -14,6 +14,7 @@ fi
 "$aseprite" -b IsometricTilesTest/tiles_test.aseprite --sheet IsometricTilesTest/tiles_test.png
 "$aseprite" -b IsometricTiles/colored_tiles_map.aseprite --sheet IsometricTiles/colored_tiles_map.png
 "$aseprite" -b IsometricTiles/red_tiles_death.aseprite --sheet IsometricTiles/red_tiles_death.png
+"$aseprite" -b IsometricTiles/colored_rune_tiles_map.aseprite --sheet IsometricTiles/colored_rune_tiles_map.png
 ### END ISOMETRIC TILES ###
 
 ### EFFECTS ###
