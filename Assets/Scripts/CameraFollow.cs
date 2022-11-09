@@ -25,4 +25,14 @@ public class CameraFollow : MonoBehaviour
             transform.position = Vector3.SmoothDamp(transform.position, clampedTargetPos + posOffset, ref velocity, timeOffset);
         }
     }
+
+    public void SetObjectToFollow(GameObject newObjectToFollow)
+    {
+        objectToFollow = newObjectToFollow;
+    }
+
+    public GameObject GetObjectToFollow()
+    {
+        return objectToFollow;
+    }
 }

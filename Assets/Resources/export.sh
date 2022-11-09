@@ -49,3 +49,7 @@ fi
 "$aseprite" -b Player/Redamon/run_S_player.aseprite --sheet Player/Redamon/run_S_player.png
 "$aseprite" -b Player/Redamon/death_player.aseprite --sheet Player/Redamon/death_player.png
 ### END PLAYER ###
+
+### OBJECT ###
+"$aseprite" -b Objects/dungeon_key.aseprite --sheet Objects/dungeon_key.png
+### END OBJECT ###
