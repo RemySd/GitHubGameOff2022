@@ -52,9 +52,19 @@ fi
 
 ### OBJECT ###
 "$aseprite" -b Objects/dungeon_key.aseprite --sheet Objects/dungeon_key.png
+"$aseprite" -b Objects/portal.aseprite --sheet Objects/portal.png
+"$aseprite" -b Objects/portal_interruptor.aseprite --sheet Objects/portal_interruptor.png
 ### END OBJECT ###
 
 ### TRANSITIONS ###
 "$aseprite" -b Transitions/circle_grow_up.aseprite --sheet Transitions/circle_grow_up.png
 "$aseprite" -b Transitions/circle_close.aseprite --sheet Transitions/circle_close.png
 ### END TRANSITIONS ###
+
+### PARTICLES ###
+"$aseprite" -b Particles/simple_white_particle.aseprite --sheet Particles/simple_white_particle.png
+### END PARTICLES ###
+
+### UI ###
+"$aseprite" -b UI/x_button.aseprite --sheet UI/x_button.png
+### END UI ###
