@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5697331020698725179
+--- !u!1 &5890709854478951624
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,42 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 9009705719249856484}
-  - component: {fileID: 8541780031306322999}
+  - component: {fileID: 5890709854478951626}
+  - component: {fileID: 5890709854478951627}
   m_Layer: 0
-  m_Name: ServiceLocator
+  m_Name: TransitionService
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &9009705719249856484
+--- !u!4 &5890709854478951626
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5697331020698725179}
+  m_GameObject: {fileID: 5890709854478951624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.1586834, y: 0.33149806, z: -9.998524}
+  m_LocalPosition: {x: -0.33073175, y: 0.08219048, z: -0.013958536}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8541780031306322999
+--- !u!114 &5890709854478951627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5697331020698725179}
+  m_GameObject: {fileID: 5890709854478951624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66b0dffbf17ca40368c2415b13403f34, type: 3}
+  m_Script: {fileID: 11500000, guid: 2454737aa729e4551b5d2cc46f6f4a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraServicePrefab: {fileID: 7966650410869385793, guid: c87ea59ef1dea44f6ad1aa4db2842335, type: 3}
-  effectServicePrefab: {fileID: 8671621039402924179, guid: a441010738d1b444f93e5d44349c7f84, type: 3}
-  transitionServicePrefab: {fileID: 5890709854478951624, guid: dfeb404e4d88b4e5e96a79f4a846b7bf, type: 3}
+  openTransitionPrefab: {fileID: 6293757989374555756, guid: 6f26ea00c392c4c1192cf32fc9dfef5a, type: 3}
+  closeTransitionPrefab: {fileID: 3965385834503975993, guid: 5173a1337d2d946caa3da5472e5c48c0, type: 3}

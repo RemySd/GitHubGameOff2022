@@ -11,6 +11,11 @@ public class CameraFollow : MonoBehaviour
 
     [SerializeField] private GameObject objectToFollow;
 
+    private void Start()
+    {
+        transform.position = new Vector3(objectToFollow.transform.position.x, objectToFollow.transform.position.y, -10);
+    }
+
     void Update()
     {
         if (objectToFollow)

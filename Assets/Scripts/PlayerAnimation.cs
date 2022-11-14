@@ -89,4 +89,9 @@ public class PlayerAnimation : MonoBehaviour
             anim.SetTrigger("DeathE");
         }
     }
+
+    public void RunCloseTransition()
+    {
+        ServiceLocator.GetInstance().GetTransitionService().RunCloseTransition();
+    }
 }

@@ -53,3 +53,8 @@ fi
 ### OBJECT ###
 "$aseprite" -b Objects/dungeon_key.aseprite --sheet Objects/dungeon_key.png
 ### END OBJECT ###
+
+### TRANSITIONS ###
+"$aseprite" -b Transitions/circle_grow_up.aseprite --sheet Transitions/circle_grow_up.png
+"$aseprite" -b Transitions/circle_close.aseprite --sheet Transitions/circle_close.png
+### END TRANSITIONS ###

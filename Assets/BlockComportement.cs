@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -26,18 +27,13 @@ public class BlockComportement : MonoBehaviour
 
             if (blockAttribute.isMortal)
             {
-                PlayerAnimation playerAnimation = collision.gameObject.GetComponentInChildren<PlayerAnimation>();
-                playerAnimation.RunDeath();
+                TransitionEvents.instance.onCloseTransitionTriggerDone += () =>
+                {
+                    Scene scene = SceneManager.GetActiveScene();
+                    SceneManager.LoadScene(scene.name);
+                };
 
-                GameObject spikes = Instantiate(spikeEffects, Vector2.zero, Quaternion.identity);
-                spikes.transform.parent = transform;
-                spikes.transform.position = transform.position + new Vector3(0f, 0.05f);
-                spikes.GetComponent<Animator>().Rebind();
-
-                ServiceLocator.GetInstance().GetCameraService().Shake();
-
-                // Scene scene = SceneManager.GetActiveScene();
-                // SceneManager.LoadScene(scene.name);
+                PlayerEvents.instance.OnPlayerDie(gameObject);
             }
         }
     }
