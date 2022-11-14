@@ -18,4 +18,9 @@ public class PortalManager : MonoBehaviour
             // switch scene
         }
     }
+
+    public bool isEnable()
+    {
+        return particleSystem.activeSelf;
+    }
 }
