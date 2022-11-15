@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PortalManager : MonoBehaviour
 {
@@ -15,7 +16,12 @@ public class PortalManager : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            // switch scene
+            TransitionEvents.instance.onCloseTransitionTriggerDone += () =>
+            {
+                SceneManager.LoadScene(ServiceLocator.GetInstance().GetLevelService().GetNextLevel());
+            };
+
+            ServiceLocator.GetInstance().GetTransitionService().RunCloseTransition();
         }
     }
 

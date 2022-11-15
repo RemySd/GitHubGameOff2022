@@ -45,13 +45,15 @@ public class CameraService : MonoBehaviour, IService
         currentCamera.transform.position = originalPos;
     }
 
-    public void FocusToOther(GameObject otherObject, float duration)
+    public void FocusToOther(GameObject otherObject, float duration, float later = 0f)
     {
-        StartCoroutine(FocusToOtherEnum(otherObject, duration));
+        StartCoroutine(FocusToOtherEnum(otherObject, duration, later));
     }
 
-    private IEnumerator FocusToOtherEnum(GameObject otherObject, float duration)
+    private IEnumerator FocusToOtherEnum(GameObject otherObject, float duration, float later = 0f)
     {
+        yield return new WaitForSeconds(later);
+
         CameraFollow cameraFollow = currentCamera.GetComponent<CameraFollow>();
         GameObject currentObject = cameraFollow.GetObjectToFollow();
         cameraFollow.SetObjectToFollow(otherObject);

@@ -7,6 +7,7 @@ public class ServiceLocator : MonoBehaviour
     [SerializeField] private GameObject cameraServicePrefab;
     [SerializeField] private GameObject effectServicePrefab;
     [SerializeField] private GameObject transitionServicePrefab;
+    [SerializeField] private GameObject levelServicePrefab;
 
     private static ServiceLocator instance;
     private IDictionary<string, IService> services;
@@ -71,5 +72,20 @@ public class ServiceLocator : MonoBehaviour
         instance.services.Add(TransitionService.NAME, transitionService.GetComponent<TransitionService>());
     
         return (TransitionService)instance.services[TransitionService.NAME];
+    }
+
+    public LevelService GetLevelService()
+    {
+        if (instance.services.ContainsKey(LevelService.NAME))
+        {
+            return (LevelService)instance.services[LevelService.NAME];
+        }
+
+        GameObject levelService = Instantiate(levelServicePrefab, Vector2.zero, Quaternion.identity);
+        levelService.transform.parent = gameObject.transform;
+
+        instance.services.Add(LevelService.NAME, levelService.GetComponent<LevelService>());
+
+        return (LevelService)instance.services[LevelService.NAME];
     }
 }

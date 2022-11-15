@@ -6,13 +6,14 @@ public class PortalInterruptor : MonoBehaviour
 
     [SerializeField] private PortalManager portal;
     [SerializeField] private GameObject UIButtonX;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
+    [SerializeField] private Sprite interruptorEnable;
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-        if (collision.CompareTag("Player"))
+    {        
+        if (collision.CompareTag("Player") && !portal.isEnable())
         {
-            Debug.Log("okok");
             isTrigger = true;
             UIButtonX.SetActive(true);
         }
@@ -20,7 +21,7 @@ public class PortalInterruptor : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !portal.isEnable())
         {
             isTrigger = false;
             UIButtonX.SetActive(false);
@@ -31,7 +32,12 @@ public class PortalInterruptor : MonoBehaviour
     {
         if (isTrigger && Input.GetKeyDown(KeyCode.X) && !portal.isEnable())
         {
+            spriteRenderer.sprite = interruptorEnable;
             portal.EnablePortal();
+            ServiceLocator.GetInstance().GetCameraService().FocusToOther(portal.gameObject, 3f, 0.3f);
+
+            isTrigger = false;
+            UIButtonX.SetActive(false);
         }
     }
 }

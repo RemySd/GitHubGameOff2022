@@ -11,6 +11,8 @@ fi
 ### ISOMETRIC TILES ###
 # GROUND #
 "$aseprite" -b IsometricTiles/tiles_map.aseprite --sheet IsometricTiles/tiles_map.png
+"$aseprite" -b IsometricTiles/tiles_map_wall_collider.aseprite --sheet IsometricTiles/tiles_map_wall_collider.png
+"$aseprite" -b IsometricTiles/tiles_map_wall_collider_v2.aseprite --sheet IsometricTiles/tiles_map_wall_collider_v2.png
 "$aseprite" -b IsometricTilesTest/tiles_test.aseprite --sheet IsometricTilesTest/tiles_test.png
 "$aseprite" -b IsometricTiles/colored_tiles_map.aseprite --sheet IsometricTiles/colored_tiles_map.png
 "$aseprite" -b IsometricTiles/red_tiles_death.aseprite --sheet IsometricTiles/red_tiles_death.png
@@ -54,6 +56,7 @@ fi
 "$aseprite" -b Objects/dungeon_key.aseprite --sheet Objects/dungeon_key.png
 "$aseprite" -b Objects/portal.aseprite --sheet Objects/portal.png
 "$aseprite" -b Objects/portal_interruptor.aseprite --sheet Objects/portal_interruptor.png
+"$aseprite" -b Objects/rules_board.aseprite --sheet Objects/rules_board.png
 ### END OBJECT ###
 
 ### TRANSITIONS ###

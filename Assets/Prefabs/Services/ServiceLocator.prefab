@@ -47,3 +47,4 @@ MonoBehaviour:
   cameraServicePrefab: {fileID: 7966650410869385793, guid: c87ea59ef1dea44f6ad1aa4db2842335, type: 3}
   effectServicePrefab: {fileID: 8671621039402924179, guid: a441010738d1b444f93e5d44349c7f84, type: 3}
   transitionServicePrefab: {fileID: 5890709854478951624, guid: dfeb404e4d88b4e5e96a79f4a846b7bf, type: 3}
+  levelServicePrefab: {fileID: 7292861289310493006, guid: e294c4cc404e342cda5fe64945e248c0, type: 3}

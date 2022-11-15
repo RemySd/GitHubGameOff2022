@@ -18,15 +18,14 @@ public class TransitionService : MonoBehaviour, IService
     public void RunOpenTransition()
     {
         GameObject openTransition = Instantiate(openTransitionPrefab, Vector3.zero, Quaternion.identity);
-        openTransition.transform.position = new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y);
-        // openTransition.GetComponent<Animator>().Rebind();
+        openTransition.transform.parent = Camera.main.transform;
+        openTransition.transform.localPosition = new Vector3(0, 0, 1);
     }
 
     public void RunCloseTransition()
     {
         GameObject closeTransition = Instantiate(closeTransitionPrefab, Vector3.zero, Quaternion.identity);
-        //closeTransition.transform.position = Camera.main.transform.position;
-        closeTransition.transform.position = new Vector2(Camera.main.transform.position.x, Camera.main.transform.position.y);
+        closeTransition.transform.parent = Camera.main.transform;
+        closeTransition.transform.localPosition = new Vector3(0, 0, 1);
     }
 }
-
