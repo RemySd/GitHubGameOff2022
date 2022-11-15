@@ -48,3 +48,4 @@ MonoBehaviour:
   effectServicePrefab: {fileID: 8671621039402924179, guid: a441010738d1b444f93e5d44349c7f84, type: 3}
   transitionServicePrefab: {fileID: 5890709854478951624, guid: dfeb404e4d88b4e5e96a79f4a846b7bf, type: 3}
   levelServicePrefab: {fileID: 7292861289310493006, guid: e294c4cc404e342cda5fe64945e248c0, type: 3}
+  uiServicePrefab: {fileID: 7516277066325794326, guid: 209fc52a353f5465c91d284c6ed8515e, type: 3}

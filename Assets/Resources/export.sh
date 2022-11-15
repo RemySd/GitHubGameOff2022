@@ -70,4 +70,5 @@ fi
 
 ### UI ###
 "$aseprite" -b UI/x_button.aseprite --sheet UI/x_button.png
+"$aseprite" -b UI/rules_board.aseprite --sheet UI/rules_board.png
 ### END UI ###
