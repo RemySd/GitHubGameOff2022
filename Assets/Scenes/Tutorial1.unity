@@ -216,8 +216,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introDialog:
-    dialogImage: {fileID: 0}
-    sentences: []
+    dialogImage: {fileID: -989538375, guid: 57fed5643c2034327bb8d7bb65b7caa6, type: 3}
+    sentences:
+    - Today is my last mission to became an Explorator.
+    - I need to go on the Ancient Dungeon Runes.
+    - It is located at the end of this way.
 --- !u!4 &111207927
 Transform:
   m_ObjectHideFlags: 0
@@ -14245,6 +14248,7 @@ GameObject:
   - component: {fileID: 1955048019}
   - component: {fileID: 1955048018}
   - component: {fileID: 1955048021}
+  - component: {fileID: 1955048022}
   m_Layer: 0
   m_Name: ChiefNpc
   m_TagString: Untagged
@@ -14357,6 +14361,22 @@ MonoBehaviour:
     - My disciple, your well became a great dungeon Explorator.
     - Here is the door of the Ancient Dungeon Runes.
     - He is fullfiled of enigme.
+--- !u!70 &1955048022
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955048017}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0023696453, y: -0.100769006}
+  m_Size: {x: 0.24919496, y: 0.14608477}
+  m_Direction: 1
 --- !u!1 &1994185620
 GameObject:
   m_ObjectHideFlags: 0
@@ -14395,10 +14415,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1651878512, guid: 0a089c3a03b9949908b1589bcbf914c7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6323141417917234392, guid: 0a089c3a03b9949908b1589bcbf914c7, type: 3}
       propertyPath: m_Camera
       value: 
