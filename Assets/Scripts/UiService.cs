@@ -30,6 +30,4 @@ public class UiService : MonoBehaviour, IService
     {
         rulesBoardUI.GetComponent<RulesBoardUI>().SetRulesText(newText);
     }
-
-    
 }

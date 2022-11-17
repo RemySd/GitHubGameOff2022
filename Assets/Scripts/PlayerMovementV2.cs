@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class PlayerMovementV2 : MonoBehaviour
 {
-    private Rigidbody2D rigidbody;
+    private new Rigidbody2D rigidbody;
 
     [SerializeField] private float moveSpeed = 1.0f;
 
     public bool dead;
+    public bool isStop = false;
 
     private void Awake()
     {
@@ -15,6 +16,13 @@ public class PlayerMovementV2 : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isStop)
+        {
+            Vector2 stopVector = new Vector2(0, 0); ;
+            FindObjectOfType<PlayerAnimation>().SetDirection(stopVector);
+            return;
+        }
+
         if (dead)
         {
             return;

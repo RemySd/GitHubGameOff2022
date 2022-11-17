@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Block
   - RulesBoard
+  - DialogPanel
   layers:
   - Default
   - TransparentFX

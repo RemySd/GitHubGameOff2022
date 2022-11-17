@@ -34,6 +34,8 @@ fi
 ### PLAYER ###
 "$aseprite" -b Player/idle_player.aseprite --sheet Player/idle_player.png
 "$aseprite" -b Player/run_player.aseprite --sheet Player/run_player.png
+### REDAMON CHIEF ###
+"$aseprite" -b Player/RedamonChief/chief_idle.aseprite --sheet Player/RedamonChief/chief_idle.png
 ### REDAMON ###
 "$aseprite" -b Player/Redamon/idle_N_player.aseprite --sheet Player/Redamon/idle_N_player.png
 "$aseprite" -b Player/Redamon/idle_NW_player.aseprite --sheet Player/Redamon/idle_NW_player.png

@@ -9,6 +9,8 @@ public class ServiceLocator : MonoBehaviour
     [SerializeField] private GameObject transitionServicePrefab;
     [SerializeField] private GameObject levelServicePrefab;
     [SerializeField] private GameObject uiServicePrefab;
+    [SerializeField] private GameObject dialogPanelServicePrefab;
+    [SerializeField] private GameObject playerServicePrefab;
 
     private static ServiceLocator instance;
     private IDictionary<string, IService> services;
@@ -33,6 +35,7 @@ public class ServiceLocator : MonoBehaviour
     private void Start()
     {
         GetUiService();
+        GetDialogPanelService();
     }
 
     public CameraService GetCameraService()
@@ -108,5 +111,38 @@ public class ServiceLocator : MonoBehaviour
         instance.services.Add(UiService.NAME, uiService.GetComponent<UiService>());
 
         return (UiService) instance.services[UiService.NAME];
+    }
+
+    public DialogPanelService GetDialogPanelService()
+    {
+        if (instance.services.ContainsKey(DialogPanelService.NAME))
+        {
+            return (DialogPanelService)instance.services[DialogPanelService.NAME];
+        }
+
+        GameObject dialogPanelService = Instantiate(dialogPanelServicePrefab, Vector2.zero, Quaternion.identity);
+        dialogPanelService.transform.parent = gameObject.transform;
+
+        instance.services.Add(DialogPanelService.NAME, dialogPanelService.GetComponent<DialogPanelService>());
+
+        return (DialogPanelService)instance.services[DialogPanelService.NAME];
+    }
+
+    public PlayerService GetPlayerService()
+    {
+        if (instance.services.ContainsKey(PlayerService.NAME))
+        {
+            return (PlayerService)instance.services[PlayerService.NAME];
+        }
+
+        GameObject playerService = Instantiate(playerServicePrefab, Vector2.zero, Quaternion.identity);
+        playerService.transform.parent = gameObject.transform;
+
+        PlayerService playerServiceScript = playerService.GetComponent<PlayerService>();
+        playerServiceScript.Init();
+
+        instance.services.Add(PlayerService.NAME, playerServiceScript);
+
+        return (PlayerService)instance.services[PlayerService.NAME];
     }
 }
