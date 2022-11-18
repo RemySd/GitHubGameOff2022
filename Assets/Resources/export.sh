@@ -29,6 +29,7 @@ fi
 "$aseprite" -b Decorations/column_basement.aseprite --sheet Decorations/column_basement.png
 "$aseprite" -b Decorations/torch.aseprite --sheet Decorations/torch.png
 "$aseprite" -b Decorations/pixel_flame.aseprite --sheet Decorations/pixel_flame.png
+"$aseprite" -b Decorations/spikes_wall.aseprite --sheet Decorations/spikes_wall.png
 ### END DECORATIONS ###
 
 ### PLAYER ###

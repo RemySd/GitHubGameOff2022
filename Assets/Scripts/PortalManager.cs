@@ -18,6 +18,7 @@ public class PortalManager : MonoBehaviour
         {
             TransitionEvents.instance.onCloseTransitionTriggerDone += () =>
             {
+                ServiceLocator.GetInstance().GetPlayerService().DisablePlayerMovement();
                 SceneManager.LoadScene(ServiceLocator.GetInstance().GetLevelService().GetNextLevel());
             };
 

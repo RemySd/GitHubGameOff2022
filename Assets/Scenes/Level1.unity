@@ -9401,6 +9401,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a089c3a03b9949908b1589bcbf914c7, type: 3}
+--- !u!1 &2112558989 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6323141418110367285, guid: 0a089c3a03b9949908b1589bcbf914c7, type: 3}
+  m_PrefabInstance: {fileID: 2112558988}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2130888899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9529,7 +9534,7 @@ PrefabInstance:
     - target: {fileID: 1474606737254549668, guid: 5922cb665d87948d98a6f389987e8f17, type: 3}
       propertyPath: UIButtonX
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2112558989}
     - target: {fileID: 1474606737254549669, guid: 5922cb665d87948d98a6f389987e8f17, type: 3}
       propertyPath: m_RootOrder
       value: 3
