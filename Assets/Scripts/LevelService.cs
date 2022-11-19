@@ -12,6 +12,11 @@ public class LevelService : MonoBehaviour, IService
 
     public string GetNextLevel()
     {
+        if (SceneManager.GetActiveScene().name == "Level2")
+        {
+            return "Level3";
+        }
+
         if (SceneManager.GetActiveScene().name == "Level1")
         {
             return "Level2";

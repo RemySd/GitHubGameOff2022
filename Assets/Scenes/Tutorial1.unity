@@ -219,7 +219,7 @@ MonoBehaviour:
     dialogImage: {fileID: -989538375, guid: 57fed5643c2034327bb8d7bb65b7caa6, type: 3}
     sentences:
     - Today is my last mission to became an Explorator.
-    - I need to go on the Ancient Dungeon Runes.
+    - I need to go to the Ancient Rune Dungeon.
     - It is located at the end of this way.
 --- !u!4 &111207927
 Transform:

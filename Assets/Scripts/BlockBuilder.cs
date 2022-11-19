@@ -25,6 +25,11 @@ public class BlockBuilder : MonoBehaviour
             {
                 blockAttribute.SetIsMortal(true);
             }
+
+            if (blockAttribute.GetAdjacentByColor("blue").Count < 1 && blockAttribute.GetColor() == "blue")
+            {
+                blockAttribute.SetIsMortal(true);
+            }
         }
     }
 
