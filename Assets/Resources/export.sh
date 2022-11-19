@@ -77,3 +77,8 @@ fi
 "$aseprite" -b UI/x_button.aseprite --sheet UI/x_button.png
 "$aseprite" -b UI/rules_board.aseprite --sheet UI/rules_board.png
 ### END UI ###
+
+### WEAPON ###
+"$aseprite" -b Weapons/sword.aseprite --sheet Weapons/sword.png
+"$aseprite" -b Weapons/knife.aseprite --sheet Weapons/knife.png
+### END WEAPON ###

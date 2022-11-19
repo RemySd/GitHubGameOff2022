@@ -12,9 +12,9 @@ public class LevelService : MonoBehaviour, IService
 
     public string GetNextLevel()
     {
-        if (SceneManager.GetActiveScene().name == "Level2")
+        if (SceneManager.GetActiveScene().name == "Level0")
         {
-            return "Level3";
+            return "Level1";
         }
 
         if (SceneManager.GetActiveScene().name == "Level1")
@@ -22,9 +22,14 @@ public class LevelService : MonoBehaviour, IService
             return "Level2";
         }
 
+        if (SceneManager.GetActiveScene().name == "Level2")
+        {
+            return "Level3";
+        }
+
         if (SceneManager.GetActiveScene().name == "Tutorial2")
         {
-            return "Level1";
+            return "Level0";
         }
 
         return "";

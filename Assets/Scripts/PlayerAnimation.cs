@@ -11,7 +11,9 @@ public class PlayerAnimation : MonoBehaviour
 
     int lastDirection;
 
-    private float angleSave;
+    public float angleSave;
+
+    public Vector2 normalizeDir;
 
     private void Awake()
     {
@@ -47,6 +49,7 @@ public class PlayerAnimation : MonoBehaviour
             directionArray = runDirections;
 
             lastDirection = DirectionToIndex(_direction);//MARKER Get the index of the slcie from the direction vector
+            //Debug.Log(lastDirection);
         }
 
         anim.Play(directionArray[lastDirection]);
@@ -56,12 +59,12 @@ public class PlayerAnimation : MonoBehaviour
     //CORE this goes in a counter-clock direction
     private int DirectionToIndex(Vector2 _direction)
     {
-        Vector2 norDir = _direction.normalized;//MARKER return this vector with a magnitude of 1 and get the normalized to an index
+        normalizeDir = _direction.normalized;//MARKER return this vector with a magnitude of 1 and get the normalized to an index
 
         float step = 360 / 8;//MARKER 45 one circle and 8 slices//Calcuate how many degrees one slice is 
         float offset = step / 2;//MARKER 22.5//OFFSET help us easy to calcuate and get the correct index of the string array
 
-        float angle = Vector2.SignedAngle(Vector2.up, norDir);//MARKER returns the signed angle in degrees between A and B
+        float angle = Vector2.SignedAngle(Vector2.up, normalizeDir);//MARKER returns the signed angle in degrees between A and B
 
         angle += offset;//Help us easy to calcuate and get the correct index of the string array
 

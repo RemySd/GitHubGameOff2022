@@ -493,6 +493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rulesText: {fileID: 6323141417496582549}
+  jsonFile: {fileID: 4900000, guid: c3cd2a483e21d4eb1abab995a6614907, type: 3}
 --- !u!1 &6323141417211246788
 GameObject:
   m_ObjectHideFlags: 0

@@ -4169,6 +4169,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3730957667089802875, guid: 1a67952e5f47f45aa8fcbd6fd681934f, type: 3}
   m_PrefabInstance: {fileID: 3730957667182689851}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1364216624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364216618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8255694400840df8518a16878abae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knifePrefab: {fileID: 8694829266370297261, guid: 2874473119e8a4530a039ca6d568ad3b, type: 3}
 --- !u!1001 &1472656754
 PrefabInstance:
   m_ObjectHideFlags: 0

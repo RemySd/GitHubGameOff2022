@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlockBuilder : MonoBehaviour
 {
@@ -12,14 +13,24 @@ public class BlockBuilder : MonoBehaviour
         blocks = GameObject.FindGameObjectsWithTag("Block");
 
         BuildBlocksAdjacents();
-        RuleCheck();
+        CheckRule();
     }
 
-    public void RuleCheck()
+    public void CheckRule()
     {
         foreach (GameObject block in blocks)
         {
             BlockAttribute blockAttribute = block.GetComponent<BlockAttribute>();
+
+            // Custom rules for the level 0
+            if (SceneManager.GetActiveScene().name == "Tutorial2")
+            {
+                if (blockAttribute.GetColor() == "red")
+                {
+                    blockAttribute.SetIsMortal(true);
+                }
+                continue;
+            }
 
             if (blockAttribute.GetAdjacentByColor("green").Count < 2 && blockAttribute.GetColor() == "red")
             {

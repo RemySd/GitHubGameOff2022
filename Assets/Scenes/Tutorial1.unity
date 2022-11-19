@@ -14358,7 +14358,7 @@ MonoBehaviour:
   chiefDialog:
     dialogImage: {fileID: -1060215726, guid: f2b2740b0e7f14df58d2ab3445db6981, type: 3}
     sentences:
-    - My disciple, your well became a great dungeon Explorator.
+    - My disciple, you will became a great dungeon Explorator.
     - Here is the door of the Ancient Dungeon Runes.
     - He is fullfiled of enigme.
 --- !u!70 &1955048022
