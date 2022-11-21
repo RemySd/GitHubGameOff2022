@@ -3,12 +3,13 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] private GameObject knifePrefab;
+    [SerializeField] private GameObject knifeSpawnPoint;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Instantiate(knifePrefab, transform.position, Quaternion.identity);
+            Instantiate(knifePrefab, knifeSpawnPoint.transform.position, Quaternion.identity);
         }
     }
 }

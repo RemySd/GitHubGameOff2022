@@ -16,8 +16,8 @@ public class KnifeMovement : MonoBehaviour
 
         movement = FindObjectOfType<PlayerAnimation>().normalizeDir;
 
-        float zDir = Mathf.Atan2(movement.x, movement.y);
-        rotation = Quaternion.Euler(0, 0, zDir * Mathf.Rad2Deg + 45);
+        float zDir = Mathf.Atan2(movement.y, movement.x);
+        rotation = Quaternion.Euler(0, 0, zDir * Mathf.Rad2Deg - 45);
     }
 
     private void FixedUpdate()

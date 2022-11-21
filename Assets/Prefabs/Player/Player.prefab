@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3730957667089802879}
   - component: {fileID: 3730957667089802872}
   - component: {fileID: 177854533}
+  - component: {fileID: 1364216624}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -33,6 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3730957668661350058}
+  - {fileID: 7992874309862771843}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -87,6 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 0.6
   dead: 0
+  isStop: 0
 --- !u!114 &177854533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99,6 +102,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9546d09bcce06420d95b2c261f739ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1364216624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730957667089802875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8255694400840df8518a16878abae2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knifePrefab: {fileID: 8694829266370297261, guid: 2874473119e8a4530a039ca6d568ad3b, type: 3}
+  knifeSpawnPoint: {fileID: 5533431789164758488}
 --- !u!1 &3730957668661350059
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,6 +233,8 @@ MonoBehaviour:
   - RunSE
   - RunE
   - RunNE
+  angleSave: 0
+  normalizeDir: {x: 0, y: 0}
 --- !u!95 &3730957668661350056
 Animator:
   serializedVersion: 4
@@ -236,3 +255,34 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &5533431789164758488
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7992874309862771843}
+  m_Layer: 0
+  m_Name: KnifeSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7992874309862771843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5533431789164758488}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.027, y: 0.114, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3730957667089802873}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
