@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spikeEffectPrefab: {fileID: 2724380134378512534, guid: 89167636a704f47a48d18386db520234, type: 3}
+  explosionEffectPrefab: {fileID: 6854157324552128439, guid: 382f2f3bee1b247ccac38d59844badc3, type: 3}

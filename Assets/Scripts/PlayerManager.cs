@@ -9,7 +9,10 @@ public class PlayerManager : MonoBehaviour
             PlayerAnimation playerAnimation = GetComponentInChildren<PlayerAnimation>();
             playerAnimation.RunDeath();
 
-            ServiceLocator.GetInstance().GetEffectService().RunSpikeEffect(callerObject);
+            if (callerObject)
+            {
+                ServiceLocator.GetInstance().GetEffectService().RunSpikeEffect(callerObject);
+            }
         };
     }
 }

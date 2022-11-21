@@ -10,10 +10,12 @@ public class PlayerService : MonoBehaviour, IService
     }
 
     private PlayerMovementV2 playerMovement;
+    private GameObject playerGameObject;
 
     public void Init()
     {
-        playerMovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovementV2>();
+        playerGameObject = GameObject.FindGameObjectWithTag("Player");
+        playerMovement = playerGameObject.GetComponent<PlayerMovementV2>();
     }
 
     public void DisablePlayerMovement()
@@ -24,5 +26,15 @@ public class PlayerService : MonoBehaviour, IService
     public void EnablePlayerMovement()
     {
         playerMovement.isStop = false;
+    }
+
+    public GameObject GetPlayer()
+    {
+        if (playerGameObject == null)
+        {
+            playerGameObject = GameObject.FindGameObjectWithTag("Player");
+        }
+
+        return playerGameObject;
     }
 }

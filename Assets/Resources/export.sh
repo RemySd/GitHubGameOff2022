@@ -23,6 +23,7 @@ fi
 
 ### EFFECTS ###
 "$aseprite" -b Effects/spikes_block.aseprite --sheet Effects/spikes_block.png
+"$aseprite" -b Effects/explosion_effect.aseprite --sheet Effects/explosion_effect.png
 ### END EFFECTS ###
 
 ### DECORATIONS ###
@@ -82,3 +83,7 @@ fi
 "$aseprite" -b Weapons/sword.aseprite --sheet Weapons/sword.png
 "$aseprite" -b Weapons/knife.aseprite --sheet Weapons/knife.png
 ### END WEAPON ###
+
+### ENEMIES ###
+"$aseprite" -b Enemies/bat.aseprite --sheet Enemies/bat.png
+### END ENEMIES ###
