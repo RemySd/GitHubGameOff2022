@@ -1478,11 +1478,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9091799344849824375, guid: bb7647d9664994b298658b69fb3ba9f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.27
+      value: 0.369
       objectReference: {fileID: 0}
     - target: {fileID: 9091799344849824375, guid: bb7647d9664994b298658b69fb3ba9f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.725
+      value: 0.062
       objectReference: {fileID: 0}
     - target: {fileID: 9091799344849824375, guid: bb7647d9664994b298658b69fb3ba9f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1674,11 +1674,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3730957667089802873, guid: 1a67952e5f47f45aa8fcbd6fd681934f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.136
+      value: 0.124
       objectReference: {fileID: 0}
     - target: {fileID: 3730957667089802873, guid: 1a67952e5f47f45aa8fcbd6fd681934f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.167
+      value: -0.277
       objectReference: {fileID: 0}
     - target: {fileID: 3730957667089802873, guid: 1a67952e5f47f45aa8fcbd6fd681934f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5015,6 +5015,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2739624543ac2428b99cc1d9b03235cb, type: 3}
+--- !u!1 &1405986354
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1405986357}
+  - component: {fileID: 1405986356}
+  - component: {fileID: 1405986355}
+  m_Layer: 0
+  m_Name: IntroDialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!58 &1405986355
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405986354}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.015789688, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.32631665
+--- !u!114 &1405986356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405986354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e87ef09c30934cfb9701e1b21e67dd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introDialog:
+    dialogImage: {fileID: -989538375, guid: 57fed5643c2034327bb8d7bb65b7caa6, type: 3}
+    sentences:
+    - Ok, an adjacent rune is glued to one of 4 border from another rune.
+    - let's tread carefully.
+--- !u!4 &1405986357
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405986354}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.796, y: 0.77, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1415653002
 PrefabInstance:
   m_ObjectHideFlags: 0

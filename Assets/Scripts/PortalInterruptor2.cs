@@ -6,18 +6,16 @@ public class PortalInterruptor2 : MonoBehaviour
 
     [SerializeField] private Sprite portalInterruptorEnable;
 
-    private PortalManager portalManager;
-
     private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        portalManager = GameObject.FindGameObjectWithTag("Portal").GetComponent<PortalManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Knife"))
         {
+            PortalManager portalManager = GameObject.FindGameObjectWithTag("Portal").GetComponent<PortalManager>();
             portalManager.EnablePortal();
             ServiceLocator.GetInstance().GetCameraService().FocusToOther(portalManager.gameObject, 3f, 0.3f);
 
