@@ -2,5 +2,6 @@
     "Tutorial2": "- All green runes are safe.",
     "Level0": "- All green runes are safe.\n- All red runes with 2 green adjacents runes are safe.",
     "Level1": "- All green runes are safe.\n- All red runes with 2 green adjacents runes are safe.",
-    "Level2": "- All green runes are safe.\n- All red runes with 2 green adjacents runes are safe.\n- All blue runes with one or more blue runes are safe."
+    "Level2": "- All green runes are safe.\n- All red runes with 2 green adjacents runes are safe.\n- All blue runes with one or more blue adjacents runes are safe.",
+    "Level3": "- All green runes are safe.\n- All red runes with 2 green adjacents runes are safe.\n- All blue runes with one or more blue adjacents runes are safe."
 }

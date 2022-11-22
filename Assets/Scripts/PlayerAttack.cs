@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (Input.GetKeyDown(KeyCode.C) && PlayerPrefs.GetInt("knife", 0) > 0)
         {
             Instantiate(knifePrefab, knifeSpawnPoint.transform.position, Quaternion.identity);
         }

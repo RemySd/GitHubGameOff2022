@@ -8,6 +8,7 @@ TagManager:
   - RulesBoard
   - DialogPanel
   - Knife
+  - Portal
   layers:
   - Default
   - TransparentFX

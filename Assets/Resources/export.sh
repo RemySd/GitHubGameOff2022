@@ -18,7 +18,6 @@ fi
 "$aseprite" -b IsometricTiles/red_tiles_death.aseprite --sheet IsometricTiles/red_tiles_death.png
 "$aseprite" -b IsometricTiles/colored_rune_tiles_map.aseprite --sheet IsometricTiles/colored_rune_tiles_map.png
 "$aseprite" -b IsometricTiles/earth_tiles_map.aseprite --sheet IsometricTiles/earth_tiles_map.png
-
 ### END ISOMETRIC TILES ###
 
 ### EFFECTS ###
@@ -62,6 +61,7 @@ fi
 "$aseprite" -b Objects/dungeon_key.aseprite --sheet Objects/dungeon_key.png
 "$aseprite" -b Objects/portal.aseprite --sheet Objects/portal.png
 "$aseprite" -b Objects/portal_interruptor.aseprite --sheet Objects/portal_interruptor.png
+"$aseprite" -b Objects/portal_interruptor_2.aseprite --sheet Objects/portal_interruptor_2.png
 "$aseprite" -b Objects/rules_board.aseprite --sheet Objects/rules_board.png
 ### END OBJECT ###
 
