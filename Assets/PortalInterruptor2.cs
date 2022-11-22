@@ -16,10 +16,8 @@ public class PortalInterruptor2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("ok");
         if (collision.CompareTag("Knife"))
         {
-            Debug.Log("hit knife");
             portalManager.EnablePortal();
             ServiceLocator.GetInstance().GetCameraService().FocusToOther(portalManager.gameObject, 3f, 0.3f);
 
