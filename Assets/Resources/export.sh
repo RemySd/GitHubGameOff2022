@@ -87,3 +87,8 @@ fi
 ### ENEMIES ###
 "$aseprite" -b Enemies/bat.aseprite --sheet Enemies/bat.png
 ### END ENEMIES ###
+
+### BOSS ###
+"$aseprite" -b Boss/eye_body.aseprite --sheet Boss/eye_body.png
+"$aseprite" -b Boss/eye_only.aseprite --sheet Boss/eye_only.png
+### END BOSS ###
