@@ -1735,7 +1735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 831018833}
   m_Layer: 0
-  m_Name: Bat
+  m_Name: Bats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
