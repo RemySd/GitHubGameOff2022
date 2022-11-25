@@ -3,8 +3,29 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
-    [SerializeField] private int lifePoint = 5;
+    [SerializeField] private int lifePoint = 50;
     [SerializeField] private SpriteRenderer eyeSpriteRenderer;
+    [SerializeField] private GameObject orbz;
+    [SerializeField] private GameObject orbzSpawn;
+
+    private Animator bossAnimator;
+    private bool canInvoke = false;
+
+    private void Start()
+    {
+        canInvoke = false;
+        bossAnimator = GetComponent<Animator>();
+
+        InvokeRepeating("SpawnOrbz", 2f, 3f);
+    }
+
+    private void SpawnOrbz()
+    {
+        if (canInvoke)
+        {
+            Instantiate(orbz, orbzSpawn.transform.position, Quaternion.identity);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,6 +39,7 @@ public class Boss : MonoBehaviour
             {
                 ServiceLocator.GetInstance().GetCameraService().FocusToOther(gameObject, 10f);
                 StartCoroutine(RunRandomExplosion());
+                canInvoke = false;
             }
         }
     }
@@ -41,5 +63,7 @@ public class Boss : MonoBehaviour
             ServiceLocator.GetInstance().GetCameraService().Shake();
             ServiceLocator.GetInstance().GetEffectService().RunExplosionEffect(explosionSpawn[Random.Range(0, 6)]);
         }
+
+        bossAnimator.SetTrigger("DeathBoss");
     }
 }

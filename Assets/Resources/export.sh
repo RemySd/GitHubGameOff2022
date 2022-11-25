@@ -92,4 +92,5 @@ fi
 "$aseprite" -b Boss/eye_body.aseprite --sheet Boss/eye_body.png
 "$aseprite" -b Boss/eye_only.aseprite --sheet Boss/eye_only.png
 "$aseprite" -b Boss/sub_body.aseprite --sheet Boss/sub_body.png
+"$aseprite" -b Boss/orbz.aseprite --sheet Boss/orbz.png
 ### END BOSS ###
