@@ -8,28 +8,38 @@ public class Boss : MonoBehaviour
     [SerializeField] private GameObject orbz;
     [SerializeField] private GameObject orbzSpawn;
 
+    [SerializeField] private Animator transitionAnimator;
+
     private Animator bossAnimator;
-    private bool canInvoke = false;
+
+    [SerializeField]
+    private bool canInvokeAttack = false;
+
+    private float nextActionTime;
+
+    [SerializeField]
+    private float period;
 
     private void Start()
     {
-        canInvoke = false;
-        bossAnimator = GetComponent<Animator>();
+        nextActionTime = Time.time;
 
-        InvokeRepeating("SpawnOrbz", 2f, 3f);
+        canInvokeAttack = false;
+        bossAnimator = GetComponent<Animator>();
     }
 
-    private void SpawnOrbz()
+    private void Update()
     {
-        if (canInvoke)
+        if (Time.time > nextActionTime && canInvokeAttack)
         {
+            nextActionTime = Time.time + period;
             Instantiate(orbz, orbzSpawn.transform.position, Quaternion.identity);
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Knife"))
+        if (collision.CompareTag("Knife") && canInvokeAttack)
         {
             StartCoroutine(HitEye());
 
@@ -37,9 +47,9 @@ public class Boss : MonoBehaviour
 
             if (lifePoint <= 0)
             {
+                canInvokeAttack = false;
                 ServiceLocator.GetInstance().GetCameraService().FocusToOther(gameObject, 10f);
                 StartCoroutine(RunRandomExplosion());
-                canInvoke = false;
             }
         }
     }
@@ -65,5 +75,21 @@ public class Boss : MonoBehaviour
         }
 
         bossAnimator.SetTrigger("DeathBoss");
+
+        yield return new WaitForSeconds(2f);
+
+        transitionAnimator.SetTrigger("RunTransition");
+    }
+
+    public void EnableBossAttack()
+    {
+        bossAnimator.SetTrigger("StartBoss");
+        StartCoroutine(StartAttack());
+    }
+
+    private IEnumerator StartAttack()
+    {
+        yield return new WaitForSeconds(2.5f);
+        canInvokeAttack = true;
     }
 }
