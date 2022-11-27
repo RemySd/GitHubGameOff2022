@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class ServiceLocator : MonoBehaviour
 {
@@ -34,6 +34,11 @@ public class ServiceLocator : MonoBehaviour
 
     private void Start()
     {
+        if (SceneManager.GetActiveScene().name == "Menu")
+        {
+            return;
+        }
+
         GetUiService();
         GetDialogPanelService();
     }
