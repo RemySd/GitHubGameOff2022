@@ -10,6 +10,8 @@ TagManager:
   - Knife
   - Portal
   - ExplosionSpawn
+  - BackgroundSource
+  - SfxSource
   layers:
   - Default
   - TransparentFX

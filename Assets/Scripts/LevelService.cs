@@ -32,6 +32,11 @@ public class LevelService : MonoBehaviour, IService
             return "Level4";
         }
 
+        if (SceneManager.GetActiveScene().name == "Level4")
+        {
+            return "Boss";
+        }
+
         if (SceneManager.GetActiveScene().name == "Tutorial2")
         {
             return "Level0";

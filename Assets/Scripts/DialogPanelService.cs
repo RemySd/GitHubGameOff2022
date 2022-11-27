@@ -58,8 +58,13 @@ public class DialogPanelService : MonoBehaviour, IService
         dialogPanelContainer.dialogText.text = "";
         foreach (char letter in sentence)
         {
+            if (letter != ' ')
+            {
+                SfxSource.instance.PlayDialog();
+            }
+            
             dialogPanelContainer.dialogText.text += letter;
-            yield return new WaitForSeconds(0.02f);
+            yield return new WaitForSeconds(0.055f);
         }
     }
 
