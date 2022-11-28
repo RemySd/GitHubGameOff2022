@@ -18,6 +18,8 @@ public class KnifeMovement : MonoBehaviour
 
         float zDir = Mathf.Atan2(movement.y, movement.x);
         rotation = Quaternion.Euler(0, 0, zDir * Mathf.Rad2Deg - 45);
+
+        SfxSource.instance.PlayKnifeThrow();
     }
 
     private void FixedUpdate()

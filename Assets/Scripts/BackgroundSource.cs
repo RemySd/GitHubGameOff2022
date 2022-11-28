@@ -1,14 +1,26 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BackgroundSource : MonoBehaviour
 {
+    [SerializeField] private AudioClip windAudio;
     [SerializeField] private AudioClip gameAudio;
+    [SerializeField] private AudioClip bossAudio;
 
     private AudioSource audioSource;
 
+    public static BackgroundSource instance;
+
     private void Awake()
     {
+        if (instance)
+        {
+            return;
+        }
+
+        instance = this;
+
         audioSource = gameObject.GetComponent<AudioSource>();
     }
 
@@ -19,16 +31,40 @@ public class BackgroundSource : MonoBehaviour
 
     public IEnumerator CheckAudioToLoad()
     {
-        if (audioSource.clip != gameAudio)
+        if (audioSource.clip != GetAudioToPlay())
         {
             StartCoroutine(StartFade(audioSource, 0.6f, 0));
             yield return new WaitForSeconds(0.6f);
-            audioSource.clip = gameAudio;
-            audioSource.Play();
+            audioSource.clip = GetAudioToPlay();
+            if (audioSource.clip)
+            {
+                audioSource.Play();
+            }
             StartCoroutine(StartFade(audioSource, 0.6f, 0.3f));
         }
 
         yield return null;
+    }
+
+    public void PlayBossBakcground()
+    {
+        audioSource.clip = bossAudio;
+        audioSource.Play();
+    }
+
+    private AudioClip GetAudioToPlay()
+    {
+        if (SceneManager.GetActiveScene().name == "Boss")
+        {
+            return null;
+        }
+
+        if (SceneManager.GetActiveScene().name == "Menu" || SceneManager.GetActiveScene().name == "Tutorial1" || SceneManager.GetActiveScene().name == "LevelEnd")
+        {
+            return windAudio;
+        }
+
+        return gameAudio;
     }
 
     public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)

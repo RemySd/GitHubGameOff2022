@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b983c11e1e610450cafd0f0dc1fca426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  windAudio: {fileID: 8300000, guid: bea20e4ed4c294f9a9bde4822f158ca2, type: 3}
   gameAudio: {fileID: 8300000, guid: a7049ec79c5ca4127a9adf1521d8c9d6, type: 3}
+  bossAudio: {fileID: 8300000, guid: b2cec92e0cdb34d98bae5946a03b14a4, type: 3}
 --- !u!82 &8827223605515947524
 AudioSource:
   m_ObjectHideFlags: 0
@@ -57,10 +59,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

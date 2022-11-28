@@ -6,6 +6,7 @@ public class KnifeItem : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            SfxSource.instance.PlayKnifePickUp();
             PlayerPrefs.SetInt("knife", 1);
             Destroy(gameObject);
         }

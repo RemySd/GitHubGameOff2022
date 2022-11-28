@@ -47,6 +47,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathAudio: {fileID: 8300000, guid: 2f3b848e5fc7d4502b39c904700f4a7b, type: 3}
   dialogAudio: {fileID: 8300000, guid: c06008ed0c3f547bf97c17b4ee574894, type: 3}
+  stelePressAudio: {fileID: 8300000, guid: 7bacebc449d0f48608538313998ac695, type: 3}
+  transitionAudio: {fileID: 8300000, guid: cb02b39d89ea94e4f919450254eba463, type: 3}
+  knifePickUpAudio: {fileID: 8300000, guid: e9d55efd7562140d88089ea4de2d4bd3, type: 3}
+  knifeThrowAudio: {fileID: 8300000, guid: 40668387d833e4636849b1be2c7a529d, type: 3}
+  interuptor1Audio: {fileID: 8300000, guid: 47cf3be8a3b4546418fe19b608d15451, type: 3}
+  interuptor2Audio: {fileID: 8300000, guid: 47cf3be8a3b4546418fe19b608d15451, type: 3}
+  enemyHitAudio: {fileID: 8300000, guid: 47cf3be8a3b4546418fe19b608d15451, type: 3}
+  bossExplosionAudio: {fileID: 8300000, guid: 9dddfa7391ffc4e01a92caf9d48d7f38, type: 3}
+  portalOpenAudio: {fileID: 8300000, guid: 1e5f9a175b5bc4793af850212ff0b6c7, type: 3}
 --- !u!82 &-5591149639826543196
 AudioSource:
   m_ObjectHideFlags: 0

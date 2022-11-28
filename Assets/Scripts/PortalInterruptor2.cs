@@ -15,6 +15,8 @@ public class PortalInterruptor2 : MonoBehaviour
     {
         if (collision.CompareTag("Knife"))
         {
+            SfxSource.instance.PlayInteruptor2();
+
             PortalManager portalManager = GameObject.FindGameObjectWithTag("Portal").GetComponent<PortalManager>();
             portalManager.EnablePortal();
             ServiceLocator.GetInstance().GetCameraService().FocusToOther(portalManager.gameObject, 3f, 0.3f);

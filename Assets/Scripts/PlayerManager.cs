@@ -6,6 +6,8 @@ public class PlayerManager : MonoBehaviour
     {
         PlayerEvents.instance.onPlayerDie += (callerObject) =>
         {
+            SfxSource.instance.PlayDeath();
+
             PlayerAnimation playerAnimation = GetComponentInChildren<PlayerAnimation>();
             playerAnimation.RunDeath();
 

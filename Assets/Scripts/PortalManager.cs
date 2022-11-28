@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,9 +17,11 @@ public class PortalManager : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            ServiceLocator.GetInstance().GetPlayerService().DisablePlayerMovement();
+            SfxSource.instance.PlayTransition();
+
             TransitionEvents.instance.onCloseTransitionTriggerDone += () =>
             {
-                ServiceLocator.GetInstance().GetPlayerService().DisablePlayerMovement();
                 SceneManager.LoadScene(ServiceLocator.GetInstance().GetLevelService().GetNextLevel());
             };
 

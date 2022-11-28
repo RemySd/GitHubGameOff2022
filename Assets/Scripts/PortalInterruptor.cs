@@ -32,6 +32,8 @@ public class PortalInterruptor : MonoBehaviour
     {
         if (isTrigger && Input.GetKeyDown(KeyCode.X) && !portal.isEnable())
         {
+            SfxSource.instance.PlayInteruptor1();
+
             spriteRenderer.sprite = interruptorEnable;
             portal.EnablePortal();
             ServiceLocator.GetInstance().GetCameraService().FocusToOther(portal.gameObject, 3f, 0.3f);

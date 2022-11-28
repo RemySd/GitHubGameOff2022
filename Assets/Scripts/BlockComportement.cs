@@ -19,6 +19,7 @@ public class BlockComportement : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !isPressed)
         {
+            SfxSource.instance.PlayStelePress();
             isPressed = true;
 
             spriteRenderer.sprite = pressedBlock;

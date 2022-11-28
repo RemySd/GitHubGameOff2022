@@ -11,6 +11,7 @@ public class EnableBossAttack : MonoBehaviour
     {
         if (collision.CompareTag("Player") && stepDone == false)
         {
+            BackgroundSource.instance.PlayBossBakcground();
             stepDone = true;
             bossScript.EnableBossAttack();
         }

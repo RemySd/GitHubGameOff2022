@@ -69,6 +69,11 @@ public class Boss : MonoBehaviour
 
         for (int i = 0; i < 30; i++)
         {
+            if (i%5 == 0)
+            {
+                SfxSource.instance.PlayBossExplosion();
+            }
+
             yield return new WaitForSeconds(0.1f);
             ServiceLocator.GetInstance().GetCameraService().Shake();
             ServiceLocator.GetInstance().GetEffectService().RunExplosionEffect(explosionSpawn[Random.Range(0, 6)]);

@@ -17,6 +17,8 @@ public class EnemyHit : MonoBehaviour
 
         if (collision.CompareTag("Knife"))
         {
+            SfxSource.instance.PlayEnemyHit();
+
             ServiceLocator.GetInstance().GetEffectService().RunExplosionEffect(gameObject);
 
             Destroy(gameObject);
