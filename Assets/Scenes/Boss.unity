@@ -7742,11 +7742,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ade9729bf88c416c92287daf123ae8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifePoint: 5
+  lifePoint: 50
   eyeSpriteRenderer: {fileID: 63173683}
   orbz: {fileID: 3349582072512623029, guid: fb5686d930a4d4666a758a37ca8087ef, type: 3}
   orbzSpawn: {fileID: 1674758148}
   transitionAnimator: {fileID: 7961214642818523667}
+  canInvokeAttack: 0
   period: 2
 --- !u!1001 &2147415135
 PrefabInstance:

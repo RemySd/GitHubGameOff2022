@@ -63,6 +63,7 @@ fi
 "$aseprite" -b Objects/portal_interruptor.aseprite --sheet Objects/portal_interruptor.png
 "$aseprite" -b Objects/portal_interruptor_2.aseprite --sheet Objects/portal_interruptor_2.png
 "$aseprite" -b Objects/rules_board.aseprite --sheet Objects/rules_board.png
+"$aseprite" -b Objects/book.aseprite --sheet Objects/book.png
 ### END OBJECT ###
 
 ### TRANSITIONS ###

@@ -41,6 +41,8 @@ public class Boss : MonoBehaviour
     {
         if (collision.CompareTag("Knife") && canInvokeAttack)
         {
+            SfxSource.instance.PlayEnemyHit();
+
             StartCoroutine(HitEye());
 
             lifePoint--;
