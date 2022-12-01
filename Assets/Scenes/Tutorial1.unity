@@ -219,7 +219,7 @@ MonoBehaviour:
     dialogImage: {fileID: -989538375, guid: 57fed5643c2034327bb8d7bb65b7caa6, type: 3}
     sentences:
     - Today is my last mission to became an Explorator.
-    - I need to go to the Ancient Rune Dungeon.
+    - I need to go to the ancient stele dungeon.
     - It is located at the end of this way.
 --- !u!4 &111207927
 Transform:
@@ -14370,9 +14370,10 @@ MonoBehaviour:
   chiefDialog:
     dialogImage: {fileID: -1060215726, guid: f2b2740b0e7f14df58d2ab3445db6981, type: 3}
     sentences:
-    - My disciple, you will became a great dungeon Explorator.
-    - Here is the door of the Ancient Dungeon Runes.
-    - He is fullfiled of enigme.
+    - Dear disciple, you will become a great dungeon Explorator after this step.
+    - Here is the entry of the ancient stele dungeon.
+    - He is fullfiled of enigma and probably many monsters.
+    - Go!
 --- !u!70 &1955048022
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

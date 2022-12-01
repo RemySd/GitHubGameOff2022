@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   windAudio: {fileID: 8300000, guid: bea20e4ed4c294f9a9bde4822f158ca2, type: 3}
-  gameAudio: {fileID: 8300000, guid: a7049ec79c5ca4127a9adf1521d8c9d6, type: 3}
+  gameAudio: {fileID: 8300000, guid: 0b02f1b4e1112402fb106f964250e4bb, type: 3}
   bossAudio: {fileID: 8300000, guid: b2cec92e0cdb34d98bae5946a03b14a4, type: 3}
 --- !u!82 &8827223605515947524
 AudioSource:

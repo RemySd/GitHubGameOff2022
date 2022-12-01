@@ -5683,8 +5683,8 @@ MonoBehaviour:
   introDialog:
     dialogImage: {fileID: -989538375, guid: 57fed5643c2034327bb8d7bb65b7caa6, type: 3}
     sentences:
-    - Ok, an adjacent rune is glued to one of 4 border from another rune.
-    - let's tread carefully.
+    - Ok, an adjacent stele is glued to one of 4 border from another stele.
+    - Let's tread carefully.
 --- !u!4 &1405986357
 Transform:
   m_ObjectHideFlags: 0
